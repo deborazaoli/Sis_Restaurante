@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Venda Item</title></head>
+<body>
+<h2>Cadastro de Item da Venda</h2>
+<form th:action="@{/vendaItem}" th:object="${vendaItem}" method="post">
+    <label>ID Venda:</label><input type="number" th:field="*{idVenda}" /><br/>
+    <label>ID Comida:</label><input type="number" th:field="*{idComida}" /><br/>
+    <label>Quantidade:</label><input type="number" th:field="*{quantidade}" /><br/>
+    <label>Preço Total:</label><input type="number" th:field="*{precoTotal}" step="0.01"/><br/>
+    <button type="submit">Salvar</button>
+</form>
+</body>
+</html>

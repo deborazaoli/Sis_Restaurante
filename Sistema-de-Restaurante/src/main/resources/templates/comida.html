@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Comida</title></head>
+<body>
+<h2>Cadastro Comida</h2>
+<form th:action="@{/comida}" th:object="${comida}" method="post">
+    <label>Nome:</label><input type="text" th:field="*{nome}" /><br/>
+    <label>Calorias:</label><input type="number" th:field="*{calorias}" /><br/>
+    <label>Proteínas:</label><input type="number" th:field="*{proteinas}" /><br/>
+    <label>Carboidratos:</label><input type="number" th:field="*{carboidratos}" /><br/>
+    <label>Valor:</label><input type="number" step="0.01" th:field="*{valor}" /><br/>
+    <button type="submit">Salvar</button>
+</form>
+</body>
+</html>
